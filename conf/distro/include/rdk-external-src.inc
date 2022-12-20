@@ -24,6 +24,7 @@ EXTERNALSRC_pn-ccsp-cm-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/
 EXTERNALSRC_pn-ccsp-common-library = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary')) else ''}"
 EXTERNALSRC_pn-ccsp-common-library-native = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary')) else ''}"
 EXTERNALSRC_pn-ccsp-cr = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCr' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCr')) else ''}"
+EXTERNALSRC_pn-ccsp-dhcp-mgr = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/DhcpManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/DhcpManager')) else ''}"
 EXTERNALSRC_pn-ccsp-dmcli = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspDmCli' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspDmCli')) else ''}"
 EXTERNALSRC_pn-ccsp-epon-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEPONAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEPONAgent')) else ''}"
 EXTERNALSRC_pn-ccsp-eth-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEthAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEthAgent')) else ''}"
