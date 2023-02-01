@@ -17,6 +17,11 @@ python do_git_tag_components() {
         out, return_code = runCommand(cmd, path)
         return out
 
+    def check_git_worktree(path):
+        cmd = ["git", "rev-parse", "--is-inside-work-tree"]
+        out, return_code = runCommand(cmd, path)
+        return out
+
     def get_remotes(path):
         cmd = ["git", "remote", "-v"]
         out, return_code = runCommand(cmd, path)
@@ -53,6 +58,7 @@ python do_git_tag_components() {
 
         # Try to find all the .git subdirectories recursively
         subdirs = [x[0] for x in os.walk(workdir)]
+        found = False
         for subdir in subdirs:
             dirName = os.path.basename(subdir)
             if dirName == ".git":
@@ -60,6 +66,13 @@ python do_git_tag_components() {
                 # Check that the component is a git component
                 if check_git_dir(subdir):
                     create_and_push_tags(subdir, name, gitTag, pushTag)
+                    found = True
+
+        if found == False:
+            # Check that the component is a git component
+            if check_git_worktree(subdir):
+                create_and_push_tags(subdir, name, gitTag, pushTag)
+                found = True
     else:
         bb.warn("Git TAG not specified OR no WORKDIR")
 }
