@@ -4,4 +4,4 @@
 include conf/distro/include/yocto-uninative.inc
 INHERIT_append_rpi = " image-buildinfo"
 SDK_INCLUDE_NATIVESDK = "1"
-BB_SETSCENE_ENFORCE_WHITELIST_append_rpi = " %:* *:do_fetch *"
+require ${@bb.utils.contains('DISTRO_FEATURES','kirkstone','conf/distro/include/setscene_enforce_ignore_tasks.inc','conf/distro/include/setscene_enforce_whitelist.inc',d)}
