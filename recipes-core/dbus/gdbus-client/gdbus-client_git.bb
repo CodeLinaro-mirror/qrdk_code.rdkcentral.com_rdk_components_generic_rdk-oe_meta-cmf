@@ -24,6 +24,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
 
 DEPENDS = "glib-2.0 rdk-logger"
 
+PV = "${RDK_RELEASE}+git${SRCPV}" 
 SRCREV = "${AUTOREV}"
 
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/gdbus-client;name=gdbus-client;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
