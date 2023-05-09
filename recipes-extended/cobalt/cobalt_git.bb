@@ -33,7 +33,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 DEPENDS = "virtual/libgles2 virtual/egl wayland gstreamer1.0 gstreamer1.0-plugins-base python-native bison-native"
 
-inherit pythonnative
+inherit python3native
 
 # (dw) We don't know when this will be certified - so we sticked to the master branch
 SRC_URI += "git://cobalt.googlesource.com/depot_tools.git;protocol=https;rev=acbfb02f445b1612e08131e2a4aaca4f1a849050;destsuffix=depot_tools;name=depot_tools"
