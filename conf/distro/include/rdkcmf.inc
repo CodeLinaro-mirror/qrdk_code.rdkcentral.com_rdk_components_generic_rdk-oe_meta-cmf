@@ -15,3 +15,7 @@ PARALLEL_MAKE_remove = " -l ${@int(os.sysconf(os.sysconf_names['SC_NPROCESSORS_O
 PREFERRED_VERSION_gmp = "4.2.1"
 PREFERRED_VERSION_nettle = "2.7.1"
 PREFERRED_VERSION_gnutls = "3.3.%"
+
+# Add mixed mode support in addition to the list in
+# meta-rdk/conf/distro/include/license_flags_whitelist.inc
+LICENSE_FLAGS_WHITELIST += "commercial_lib32-ffmpeg"
