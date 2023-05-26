@@ -103,7 +103,7 @@ do_install_append() {
 	# Strip versioning from the shared libraries
         # so they become development libraries (those used for linking process).
 	for so_path in $(find "${D}${libdir}/" -path "${D}${libdir}/*.so.*"); do
-	    so_devel_path="${so_path/%\.so.*/.so}"
+	    so_devel_path="${so_path%.so*}.so"
 	    mv "${so_path}" "${so_devel_path}"
 	done
     fi
