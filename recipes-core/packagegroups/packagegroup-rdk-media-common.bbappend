@@ -18,16 +18,6 @@ RDEPENDS_packagegroup-rdk-media-common_append = "\
    "
 
 RDEPENDS_packagegroup-rdk-media-common_append = "\
-   ${@bb.utils.contains("DISTRO_FEATURES", "rialto", "\
-   rialto-ocdm \
-   rialto-gstreamer \
-   rialto-client \
-   rialto-server \
-   rialto-servermanager-sim \
-   ","",d)} \
-"
-
-RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "rialto_servermanager_sim", "\
    rialto-servermanager-sim \
    ","",d)} \
