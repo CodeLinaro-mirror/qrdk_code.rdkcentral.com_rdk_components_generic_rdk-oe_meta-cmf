@@ -27,5 +27,7 @@ CMF_GITHUB_STABLE2_BRANCH ?= "rdk6-main"
 CMF_GITHUB_RBUS_BRANCH ?= "rdk6-main"
 PROJECT_BRANCH = "${@d.getVar("CMF_GIT_BRANCH").replace('/','-')}"
 
+CMF_GIT_UPDATE_BRANCH ?= "rdk6-main-update1"
+
 RDK_RELEASE ?= "rdk6-main"
 RELEASE_VERSION = "${@time.strftime("${RDK_RELEASE}.%m.%d.%y",time.gmtime())}"
