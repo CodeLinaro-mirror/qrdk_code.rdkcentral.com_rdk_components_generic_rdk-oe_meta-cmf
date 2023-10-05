@@ -71,6 +71,7 @@ EXTERNALSRC_pn-devicesettings-hal-headers = "${@'${RDK_ROOT_PATH}/rdk/components
 EXTERNALSRC_pn-devicesettings-hal-raspberrypi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/devicesettings' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/devicesettings')) else ''}"
 EXTERNALSRC_pn-diagnostics-snmp2json = "${@'${RDK_ROOT_PATH}/rdk/components/generic/diagnostics/QAM_device' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/diagnostics')) else ''}"
 EXTERNALSRC_pn-dtcpmgr-noop = "${@'${RDK_ROOT_PATH}/rdk/components/generic/dtcp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/dtcp')) else ''}"
+EXTERNALSRC_pn-ermgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/ermgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/ermgr')) else ''}"
 EXTERNALSRC_pn-fsc = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/FirmwareSanity' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/FirmwareSanity')) else ''}"
 EXTERNALSRC_pn-gdbus-client = "${@'${RDK_ROOT_PATH}/components/opensource/gdbus-client' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/gdbus-client')) else ''}"
 EXTERNALSRC_pn-gst-external-plugin = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk/src/external' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk')) else ''}"
