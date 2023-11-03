@@ -29,6 +29,7 @@ DEPENDS = "dbus dropprivileges glib-2.0 glib-2.0-native jansson virtual/libkwk l
 SRCREV = "${AUTOREV}"
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/OMI;name=${BPN};protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
 S = "${WORKDIR}/git"
+PV = "${RDK_RELEASE}+git${SRCPV}"
 
 inherit ${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'onemwsrc', 'coverity', d)} pkgconfig cmake systemd
 ONEMW_SRC_SUBPATH = "rdk/${BPN}"
