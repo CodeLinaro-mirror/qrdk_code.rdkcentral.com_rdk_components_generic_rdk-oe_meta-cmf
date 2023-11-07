@@ -212,7 +212,6 @@ EXTERNALSRC_pn-westeros = "${@'${RDK_ROOT_PATH}/components/opensource/westeros' 
 EXTERNALSRC_pn-westeros-soc-drm = "${@'${RDK_ROOT_PATH}/components/opensource/westeros/drm' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/westeros')) else ''}"
 EXTERNALSRC_pn-westeros-soc-emu = "${@'${RDK_ROOT_PATH}/devices/intel-x86-pc/rdkri/westeros' if (os.path.isdir('${RDK_ROOT_PATH}/devices/intel-x86-pc/rdkri/westeros')) else ''}"
 EXTERNALSRC_pn-westeros-soc-rpi = "${@'${RDK_ROOT_PATH}/components/opensource/westeros' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/westeros')) else ''}"
-EXTERNALSRC_pn-wifi-client-hal-raspberrypi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/wifi')) else ''}"
 EXTERNALSRC_pn-wifi-hal-generic = "${@'${RDK_ROOT_PATH}/rdk/components/generic/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/wifi')) else ''}"
 EXTERNALSRC_pn-wifi-hal-headers = "${@'${RDK_ROOT_PATH}/rdk/components/generic/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/wifi')) else ''}"
 EXTERNALSRC_pn-wsproxy = "${@'${RDK_ROOT_PATH}/rdk/components/generic/trm/wsproxy' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/trm')) else ''}"
