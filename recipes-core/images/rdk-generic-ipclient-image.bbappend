@@ -1,6 +1,8 @@
 #REFPLTV-976 removing the Control Manager service, as feature not fully functional.
 require add-non-root-user-group.inc
 require lxc-image.inc
+require recipes-core/images/rdk-generic.inc
+
 ROOTFS_POSTPROCESS_COMMAND += "remove_systemd_ctrlm_services; "
 ROOTFS_POSTPROCESS_COMMAND += "remove_Failure_case_dsmgr_services; "
 
