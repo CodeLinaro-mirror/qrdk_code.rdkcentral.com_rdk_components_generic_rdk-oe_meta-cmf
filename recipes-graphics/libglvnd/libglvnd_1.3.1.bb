@@ -31,8 +31,8 @@ HOMEPAGE         = "https://gitlab.freedesktop.org/glvnd/libglvnd"
 BUGTRACKER       = "https://bugs.freedesktop.org"
 SECTION          = "x11"
 
-SRC_URI          = "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v${PV}/libglvnd-v${PV}.tar.bz2"
-SRC_URI[md5sum]  = "e2b50d2b428a9f164ef68b6aeee9205f"
+SRC_URI          = "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v${PV}/libglvnd-v${PV}.tar.gz"
+SRC_URI[md5sum]  = "6f15e6cd3150d33a62c85caba8a2d8b2"
 # Patch to disable X11 headers lookup
 SRC_URI         += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', \
                    '', 'file://0001-Do-not-use-X11-headers-by-default.patch', d)}"
