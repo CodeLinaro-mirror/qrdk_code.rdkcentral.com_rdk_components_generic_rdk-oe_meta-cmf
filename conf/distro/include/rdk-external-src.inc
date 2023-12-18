@@ -7,9 +7,6 @@
 #
 INHERIT += "externalsrc"
 
-EXTERNALSRC_pn-aamp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/aamp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/aamp')) else ''}"
-EXTERNALSRC_pn-aampabr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/aampabr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/aampabr')) else ''}"
-EXTERNALSRC_pn-aampmetrics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/aampmetrics' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/aampmetrics')) else ''}"
 EXTERNALSRC_pn-analyzers-host = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/host' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/host')) else ''}"
 EXTERNALSRC_pn-analyzers-target = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/target' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/target')) else ''}"
 EXTERNALSRC_pn-appmanager = "${@'${RDK_ROOT_PATH}/rdk/components/generic/appmanager' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/appmanager')) else ''}"
@@ -77,7 +74,6 @@ EXTERNALSRC_pn-gst-external-plugin = "${@'${RDK_ROOT_PATH}/rdk/components/generi
 EXTERNALSRC_pn-gst-plugins-playersinkbin-emulator = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/playersinkbin' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/playersinkbin')) else ''}"
 EXTERNALSRC_pn-gst-plugins-playersinkbin-rpi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/gst-plugins-rdk/playersinkbin' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/gst-plugins-rdk/playersinkbin')) else ''}"
 EXTERNALSRC_pn-gst-plugins-rdk = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk')) else ''}"
-EXTERNALSRC_pn-gst-plugins-rdk-aamp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk-aamp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk-aamp')) else ''}"
 EXTERNALSRC_pn-gst-svp-ext = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst_svp_ext' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst_svp_ext')) else ''}"
 EXTERNALSRC_pn-gstqamtunersrc = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/qamtunersrc' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/qamtunersrc')) else ''}"
 EXTERNALSRC_pn-hal-wifi-cfg80211 = "${@'${RDK_ROOT_PATH}/components/opensource/hal-wifi-cfg80211/source/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/hal-wifi-cfg80211')) else ''}"
