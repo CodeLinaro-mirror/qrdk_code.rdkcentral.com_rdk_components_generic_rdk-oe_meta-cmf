@@ -154,7 +154,6 @@ EXTERNALSRC_pn-rdk-wifi-util = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/
 EXTERNALSRC_pn-rdkapps = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkapps' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkapps')) else ''}"
 EXTERNALSRC_pn-rdkat = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkat' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkat')) else ''}"
 EXTERNALSRC_pn-rdkbrowser2 = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser2' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser2')) else ''}"
-EXTERNALSRC_pn-rdkbrowserplatx86 = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/platform/rdkemulator' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/platform/rdkemulator')) else ''}"
 EXTERNALSRC_pn-rdkgponmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkGponManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkGponManager')) else ''}"
 EXTERNALSRC_pn-rdkxdslmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkXdslManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkXdslManager')) else ''}"
 EXTERNALSRC_pn-rdkmediaplayer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer')) else ''}"
