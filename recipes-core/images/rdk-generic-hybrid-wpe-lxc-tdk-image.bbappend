@@ -1,1 +1,0 @@
-require lxc-image.inc
