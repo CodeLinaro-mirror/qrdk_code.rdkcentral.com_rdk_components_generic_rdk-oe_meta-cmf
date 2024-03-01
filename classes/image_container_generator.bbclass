@@ -26,7 +26,6 @@ inherit python3native
 
 do_rootfs[depends] += "lxc-container-generator-native:do_populate_sysroot"
 
-SD_NOTIFY_SLEEP_US ??= ""
 TOOL_DIR="${STAGING_DATADIR_NATIVE}/lxc-container-generator"
 XML_CONF="${TOOL_DIR}/non_secure"
 XML_CONF_SECURE="${TOOL_DIR}/secure"
@@ -106,8 +105,7 @@ generate_containers_environment() {
         rdk_ver="1"
         rdkhal_ver="1"
         sanityCheck="${@define_sanity_check(bb, d)}"
-        sleep_us='${@oe.utils.conditional("SD_NOTIFY_SLEEP_US", "", "", "--usleep=${SD_NOTIFY_SLEEP_US}",d)}'
-        common_options="$sleep_us $sanityCheck -t SOC_VER=$soc_ver,OE_VER=$oe_ver,version=$version,RDK_VER=$rdk_ver,RDKHAL_VER=$rdkhal_ver"
+        common_options="-c $sanityCheck -t SOC_VER=$soc_ver,OE_VER=$oe_ver,version=$version,RDK_VER=$rdk_ver,RDKHAL_VER=$rdkhal_ver"
 
 # NON SECURE CONTAINERS
         files="`find ${XML_CONF} -type f -a -name '*.xml'|sort -V`"

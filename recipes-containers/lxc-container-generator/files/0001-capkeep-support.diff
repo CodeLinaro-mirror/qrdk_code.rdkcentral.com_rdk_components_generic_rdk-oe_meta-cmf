@@ -3,13 +3,13 @@ Upstream-Status: N/A,as the patch is specific to Comcast and Video Accelerators
 From: Lakshmipriya <LakshmipriyaLakshmipriya_Purushan@cable.comcast.com>
 ---
 
-diff --git a/src/lib/rootfs.py b/src/lib/rootfs.py
-index db15768..3091e6f 100644
---- a/src/lib/rootfs.py
-+++ b/src/lib/rootfs.py
-@@ -181,6 +181,12 @@ class cRootfs(object):
-         if error:
-             raise Exception("program returned error code {%s}"%(error))
+Index: git/src/lib/rootfs.py
+===================================================================
+--- git.orig/src/lib/rootfs.py
++++ git/src/lib/rootfs.py
+@@ -223,6 +223,12 @@ class cRootfs(object):
+         # set proper rights for container parent dir, non-recursive
+         self.changeFilePermissions(self.getPathContainerParentDirHost(), stat.S_IRUSR | stat.S_IXUSR | stat.S_IRGRP | stat.S_IXGRP)
  
 +        # set exec permission for rootfs directory for capkeep capabilities support
 +        linux_cmd = "chmod o+x %s"%self.getPathRootfsHost()
@@ -18,6 +18,5 @@ index db15768..3091e6f 100644
 +            raise Exception("program returned error code {%s}"%(error))
 +
          # set proper rights for container launcher
-         if (self.launcherName != None and self.launcherName != " "):
-             linux_cmd = "chmod 550 %s -R "%self.getLauncherFileHost()
-
+         if (self.launcherName is not None and self.launcherName != " "):
+             self.changeFilePermissions(self.getLauncherFileHost(), stat.S_IRUSR | stat.S_IXUSR | stat.S_IRGRP | stat.S_IXGRP)
