@@ -228,6 +228,7 @@ EXTERNALSRC_pn-xr-sm-engine = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xrpSM
 EXTERNALSRC_pn-xr-timer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-timer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-timer')) else ''}"
 EXTERNALSRC_pn-xr-timestamp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-timestamp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-timestamp')) else ''}"
 EXTERNALSRC_pn-xr-voice-sdk = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-voice-sdk' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-voice-sdk')) else ''}"
+EXTERNALSRC_pn-xr-voice-sdk-headers = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-voice-sdk' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-voice-sdk')) else ''}"
 EXTERNALSRC_pn-xraudio-adpcm = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio-adpcm' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xraudio-adpcm')) else ''}"
 EXTERNALSRC_pn-xraudio-opus = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio-opus' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xraudio-opus')) else ''}"
 EXTERNALSRC_pn-xraudio = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xraudio')) else ''}"
