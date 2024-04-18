@@ -1,5 +1,8 @@
 require recipes-core/images/syslog-ng-config.inc
 
+# Remove QT5 dependencies
+IMAGE_INSTALL_remove = "packagegroup-rdk-qt5"
+
 ROOTFS_POSTPROCESS_COMMAND += "${@bb.utils.contains('DISTRO_FEATURES','syslog-ng',' patch_syslog_ng_config; ',' ',d)}"
 
 python patch_syslog_ng_config() {
