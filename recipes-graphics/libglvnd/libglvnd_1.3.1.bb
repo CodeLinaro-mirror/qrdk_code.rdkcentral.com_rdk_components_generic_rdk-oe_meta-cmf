@@ -60,7 +60,9 @@ MAINTAINER       = "Damian Wrobel <dwrobel@ertelnet.rybnik.pl>"
 
 S                = "${WORKDIR}/${PN}-v${PV}"
 
-DEPENDS          = "python-native"
+#DEPENDS          = "python-native"
+
+DEPENDS += "${@bb.utils.contains("DISTRO_FEATURES", "kirkstone", "python3-native", "python-native", d)}"
 
 PROVIDES         = "${@bb.utils.contains('DISTRO_FEATURES', 'libglvnd-as-stubs-provider', '', \
                        'virtual/mesa virtual/egl virtual/libgl virtual/libgles1 virtual/libgles2', d)}"
