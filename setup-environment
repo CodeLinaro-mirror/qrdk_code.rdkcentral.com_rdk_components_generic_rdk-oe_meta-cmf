@@ -26,11 +26,11 @@ if [ $? -ne 0 ]; then
     return 1
 fi
 
-# OPTIONAL: meta-rdk-asp for ASP components.
-if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-rdk-asp') -eq 0 -a -d  $TOP_DIR/meta-rdk-asp ]
+# Add meta-rdk-wan only if not already present.
+if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-rdk-wan') -eq 0 -a -d  $TOP_DIR/meta-rdk-wan ]
 then
     cat >> conf/bblayers.conf <<EOF
-BBLAYERS =+ "\${RDKROOT}/meta-rdk-asp"
+BBLAYERS =+ "\${RDKROOT}/meta-rdk-wan"
 EOF
 fi
 
@@ -113,14 +113,6 @@ if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-rdk-voice-sdk') -eq 0
 then
     cat >> conf/bblayers.conf <<EOF
 BBLAYERS =+ "\${RDKROOT}/meta-rdk-voice-sdk"
-EOF
-fi
-
-# Add meta-spdxscanner only if not already present.
-if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-spdxscanner') -eq 0 -a -d  $TOP_DIR/meta-spdxscanner ]
-then
-    cat >> conf/bblayers.conf <<EOF
-BBLAYERS =+ "\${RDKROOT}/meta-spdxscanner"
 EOF
 fi
 

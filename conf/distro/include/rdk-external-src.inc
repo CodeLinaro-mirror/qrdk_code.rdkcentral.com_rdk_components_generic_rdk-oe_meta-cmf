@@ -150,7 +150,6 @@ EXTERNALSRC_pn-rdk-logger = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdk_log
 EXTERNALSRC_pn-rdk-oss-ssa = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkssa' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkssa')) else ''}"
 EXTERNALSRC_pn-rdk-ppp-manager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPppManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPppManager')) else ''}"
 EXTERNALSRC_pn-rdk-vlanmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkVlanBridgingManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkVlanBridgingManager')) else ''}"
-EXTERNALSRC_pn-rdk-wanmanager = "${@'${RDK_ROOT_PATH}/components/opensource/RdkWanManager' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RdkWanManager')) else ''}"
 EXTERNALSRC_pn-rdk-wifi-hal = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/rdk-wifi-hal/src' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/rdk-wifi-hal')) else ''}"
 EXTERNALSRC_pn-rdk-wifi-util = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/rdk-wifi-hal/util' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/rdk-wifi-hal')) else ''}"
 EXTERNALSRC_pn-rdkapps = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkapps' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkapps')) else ''}"
