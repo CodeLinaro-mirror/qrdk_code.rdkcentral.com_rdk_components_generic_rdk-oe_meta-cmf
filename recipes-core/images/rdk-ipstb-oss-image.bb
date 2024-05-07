@@ -12,6 +12,7 @@ require ${RDKROOT}/meta-rdk/recipes-core/images/rdk-generic-media-common.inc
 IMAGE_INSTALL += "packagegroup-rdk-oss-ipstb"
 #Add a uuid generator for generating random receiver id
 IMAGE_INSTALL += "util-linux-uuidgen"
+IMAGE_INSTALL += "rdkservices-screencapture"
 
 python __anonymous () {
     if "client" not in d.getVar('MACHINEOVERRIDES', True):
