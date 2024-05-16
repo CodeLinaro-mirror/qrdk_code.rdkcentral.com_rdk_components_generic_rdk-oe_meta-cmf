@@ -44,14 +44,6 @@ BBLAYERS =+ "\${RDKROOT}/meta-cmf-bsp-emulator"
 EOF
 fi
 
-# Add meta-cmf-qt5 only if not already present.
-if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-cmf-qt5') -eq 0 -a -d  $TOP_DIR/meta-cmf-qt5 ]
-then
-    cat >> conf/bblayers.conf <<EOF
-BBLAYERS =+ "\${RDKROOT}/meta-cmf-qt5"
-EOF
-fi
-
 # Add meta-cmf-restricted only if not already present.
 if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-cmf-restricted') -eq 0 -a -d  $TOP_DIR/meta-cmf-restricted ]
 then
