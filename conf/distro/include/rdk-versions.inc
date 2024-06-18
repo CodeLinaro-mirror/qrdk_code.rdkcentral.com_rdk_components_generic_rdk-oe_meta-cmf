@@ -28,5 +28,5 @@ CMF_GITHUB_STABLE2_BRANCH ?= "stable2"
 CMF_GITHUB_RBUS_BRANCH ?= "rbus-2.0"
 PROJECT_BRANCH = "${@d.getVar("CMF_GIT_BRANCH").replace('/','-')}"
 
-RDK_RELEASE ?= "5"
+RDK_RELEASE ?= "6.1"
 RELEASE_VERSION = "${@time.strftime("${RDK_RELEASE}.%m.%d.%y",time.gmtime())}"
