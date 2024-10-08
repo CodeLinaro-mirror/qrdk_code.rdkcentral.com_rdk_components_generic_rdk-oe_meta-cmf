@@ -4,4 +4,7 @@ SRC_URI += "${CMF_GIT_ROOT}/rdk/components/generic/telemetry;protocol=${CMF_GIT_
 inherit coverity
 
 DEPENDS_remove = "mountutils"
+DEPENDS_remove = "rdkconfig"
+
 EXTRA_OECONF_remove = "--enable-mountutils"
+EXTRA_OECONF_remove = "--enable-rdkcertselector"
