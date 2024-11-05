@@ -145,7 +145,7 @@ def retrieve_shared_libs_needed(libfullpath):
         ## parses something like below:
         ## 0x00000001 (NEEDED)                     Shared library: [libdvrmgr.so.0]
         for line in output.splitlines():
-            m = re.match(r".*\(NEEDED\).+\[(\S+\.so\S*)\]", line)
+            m = re.match(r".*\(NEEDED\).+\[(\S+\.so\S*)\]", line) or re.match(r".*\(FILTER\).+\[(\S+\.so\S*)\]", line)
             if (m):
                 sharedlibs.append(m.groups()[0])
     else:
