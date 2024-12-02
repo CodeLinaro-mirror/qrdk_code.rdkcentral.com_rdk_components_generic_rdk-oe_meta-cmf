@@ -1,8 +1,6 @@
 # A bbclass to map the processname and respective logfiles
 
-BREAKPAD_LOGMAPPER_PKG ?= "${PN}"
-
-pkg_postinst_${BREAKPAD_LOGMAPPER_PKG}_append() {
+pkg_postinst:${PN}:append() {
     process_name="${@d.getVar('BREAKPAD_LOGMAPPER_PROCLIST', True)}"
     log_files="${@d.getVar('BREAKPAD_LOGMAPPER_LOGLIST', True)}"
     file="breakpad-logmapper.conf"
