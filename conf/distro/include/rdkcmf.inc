@@ -10,4 +10,4 @@ PARALLEL_MAKE_remove = " -l ${@int(os.sysconf(os.sysconf_names['SC_NPROCESSORS_O
 
 # Add mixed mode support in addition to the list in
 # meta-rdk/conf/distro/include/license_flags_whitelist.inc
-require ${@bb.utils.contains_any('DISTRO_FEATURES','dunfell morty daisy','license_flags_whitelist.inc','license_flags_accepted.inc',d)}
+require ${@bb.utils.contains_any('DISTRO_FEATURES','dunfell','license_flags_whitelist.inc','license_flags_accepted.inc',d)}
