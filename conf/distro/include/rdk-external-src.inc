@@ -181,7 +181,6 @@ EXTERNALSRC_pn-syslog-helper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sysl
 EXTERNALSRC_pn-tdk = "${@'${RDK_ROOT_PATH}/rdkv/tools/tdkv' if (os.path.isdir('${RDK_ROOT_PATH}/rdkv/tools/tdkv')) else ''}"
 EXTERNALSRC_pn-tdk-b = "${@'${RDK_ROOT_PATH}/rdkb/tools/tdkb' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/tools/tdkb')) else ''}"
 EXTERNALSRC_pn-tdk-c = "${@'${RDK_ROOT_PATH}/rdkc/tools/tdkc' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/tools/tdkc')) else ''}"
-EXTERNALSRC_pn-telemetry = "${@'${RDK_ROOT_PATH}/rdk/components/generic/telemetry' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/telemetry')) else ''}"
 EXTERNALSRC_pn-tenablehdcp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rmf_tools/tenableHDCP' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rmf_tools/tenableHDCP')) else ''}"
 EXTERNALSRC_pn-test-and-diagnostic = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/TestAndDiagnostic' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/TestAndDiagnostic')) else ''}"
 EXTERNALSRC_pn-thumbnail = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/thumbnail' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/thumbnail')) else ''}"
