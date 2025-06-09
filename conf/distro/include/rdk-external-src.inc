@@ -16,7 +16,6 @@ EXTERNALSRC_pn-audiocapturemgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/au
 EXTERNALSRC_pn-bluetooth-core = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth')) else ''}"
 EXTERNALSRC_pn-bluetooth-leappmgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_leAppMgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_leAppMgr')) else ''}"
 EXTERNALSRC_pn-bluetooth-mgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_mgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_mgr')) else ''}"
-EXTERNALSRC_pn-breakpad-wrapper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/breakpad_wrapper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/breakpad_wrapper')) else ''}"
 EXTERNALSRC_pn-ccsp-adv-security = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspAdvSecurity' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspAdvSecurity')) else ''}"
 EXTERNALSRC_pn-ccsp-cm-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCMAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCMAgent')) else ''}"
 EXTERNALSRC_pn-ccsp-common-library = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary')) else ''}"
