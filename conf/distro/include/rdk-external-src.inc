@@ -171,7 +171,6 @@ EXTERNALSRC_pn-streamfs = "${@'${RDK_ROOT_PATH}/rdk/components/generic/streamfs'
 EXTERNALSRC_pn-streamfs-fcc = "${@'${RDK_ROOT_PATH}/rdk/components/generic/streamfs_fcc' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/streamfs_fcc')) else ''}"
 EXTERNALSRC_pn-sys-resource = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_resource' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_resource')) else ''}"
 EXTERNALSRC_pn-sys-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_utils' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_utils')) else ''}"
-EXTERNALSRC_pn-sysint-broadband = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/sysint' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/sysint')) else ''}"
 EXTERNALSRC_pn-syslog-helper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/syslog_helper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/syslog_helper')) else ''}"
 EXTERNALSRC_pn-tdk = "${@'${RDK_ROOT_PATH}/rdkv/tools/tdkv' if (os.path.isdir('${RDK_ROOT_PATH}/rdkv/tools/tdkv')) else ''}"
 EXTERNALSRC_pn-tdk-b = "${@'${RDK_ROOT_PATH}/rdkb/tools/tdkb' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/tools/tdkb')) else ''}"
