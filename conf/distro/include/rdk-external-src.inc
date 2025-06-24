@@ -18,7 +18,6 @@ EXTERNALSRC_pn-bluetooth-leappmgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic
 EXTERNALSRC_pn-bluetooth-mgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_mgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_mgr')) else ''}"
 EXTERNALSRC_pn-ccsp-common-library = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary')) else ''}"
 EXTERNALSRC_pn-ccsp-common-library-native = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspCommonLibrary')) else ''}"
-EXTERNALSRC_pn-ccsp-dhcp-mgr = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/DhcpManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/DhcpManager')) else ''}"
 EXTERNALSRC_pn-ccsp-epon-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEPONAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspEPONAgent')) else ''}"
 EXTERNALSRC_pn-ccsp-gwprovapp = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/GwProvApp' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/GwProvApp')) else ''}"
 EXTERNALSRC_pn-ccsp-gwprovapp-epon = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/GwProvApp-ePON' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/GwProvApp-ePON')) else ''}"
