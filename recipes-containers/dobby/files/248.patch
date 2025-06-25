@@ -1,0 +1,55 @@
+From 08f6220f9bb11a82c1a22d4af2f58b3d9b9140f7 Mon Sep 17 00:00:00 2001
+From: Damian Wrobel <dwrobel@ertelnet.rybnik.pl>
+Date: Mon, 3 Jul 2023 15:07:21 +0200
+Subject: [PATCH] RDKDEV-774 Fix calling mContainerStoppedCb()
+
+Fixes mContainerStoppedCb() being called when
+the application was actually stopped.
+
+This is needed for Thunder[1] with OMI[2] enabled
+as otherwise the dm-verity image (which relies on this
+notification) tries to be umounted by OMI prematurely
+(currently kernel could report that image is still busy).
+
+[1] https://github.com/rdkcentral/rdkservices/pull/4177
+[2] https://code.rdkcentral.com/r/plugins/gitiles/rdk/components/generic/rdk-oe/meta-cmf/+/refs/heads/rdk-next/recipes-support/omi/omi.bb
+
+Signed-off-by: Marcin Hajkowski <mhajkowski.contractor@libertyglobal.com>
+Signed-off-by: Damian Wrobel <dwrobel.contractor@libertyglobal.com>
+Signed-off-by: Damian Wrobel <dwrobel@ertelnet.rybnik.pl>
+
+Change-Id: I6360463e4b88dbf6d2ab05e7dc10df2d8cbedd93
+---
+ daemon/lib/source/DobbyManager.cpp | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/daemon/lib/source/DobbyManager.cpp b/daemon/lib/source/DobbyManager.cpp
+index aebe445a1..820e41898 100644
+--- a/daemon/lib/source/DobbyManager.cpp
++++ b/daemon/lib/source/DobbyManager.cpp
+@@ -2250,12 +2250,6 @@ void DobbyManager::handleContainerTerminate(const ContainerId &id, const std::un
+         container->state = DobbyContainer::State::Stopping;
+     }
+ 
+-    // signal the higher layers that a container has died
+-    if (mContainerStoppedCb)
+-    {
+-        mContainerStoppedCb(container->descriptor, id, status);
+-    }
+-
+     // check if the container has the respawn flag, if so attempt to
+     // restart the container now, this skips the preDestruction /
+     // postConstruction hooks
+@@ -2389,6 +2383,12 @@ void DobbyManager::onChildExit()
+ 
+             handleContainerTerminate(id, container, status);
+ 
++            // signal the higher layers that a container has died
++            if (mContainerStoppedCb)
++            {
++                mContainerStoppedCb(container->descriptor, id, status);
++            }
++
+             if (!container->shouldRestart(status) || !restartContainer(id, container))
+             {
+                 // remove the container, this should free all the resources
