@@ -22,7 +22,7 @@ DESCRIPTION = "Mounts and un-mounts OCI filesystem images"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'files-onemw:', 'files-rdk:', d)}"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'files-onemw:', 'files-rdk:', d)}"
 
 DEPENDS = "dbus dropprivileges glib-2.0 glib-2.0-native jansson virtual/libkwk libdacjwt libmntfsimg cjose"
 
@@ -49,7 +49,7 @@ PACKAGECONFIG[rdklogger] = "-DRDK_LOGGER_ENABLED=ON,-DRDK_LOGGER_ENABLED=OFF,rdk
 
 SYSTEMD_SERVICE_${PN} = "omi.service"
 
-do_install_append() {
+do_install:append() {
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/omi.service ${D}${systemd_unitdir}/system/
 

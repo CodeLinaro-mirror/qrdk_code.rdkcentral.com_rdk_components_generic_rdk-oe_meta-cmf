@@ -1,1 +1,1 @@
-DEPENDS_append_camera = " iarmbus"
+DEPENDS:append:camera = " iarmbus"

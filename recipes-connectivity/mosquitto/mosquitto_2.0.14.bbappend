@@ -1,1 +1,1 @@
-PACKAGECONFIG_remove = " websockets"
+PACKAGECONFIG:remove = " websockets"

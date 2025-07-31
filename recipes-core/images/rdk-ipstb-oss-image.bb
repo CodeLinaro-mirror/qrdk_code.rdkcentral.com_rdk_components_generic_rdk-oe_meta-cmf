@@ -27,4 +27,4 @@ require ${RDKROOT}/meta-cmf/recipes-core/images/rdk-generic.inc
 #Add the final common image which will be created as symbolic link
 IMAGE_LINK_NAME = "${IMAGE_BASENAME}"
 
-IMAGE_INSTALL_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'streamfs', 'streamfs streamfs-fcc', '', d)}"
+IMAGE_INSTALL:append = " ${@bb.utils.contains('DISTRO_FEATURES', 'streamfs', 'streamfs streamfs-fcc', '', d)}"

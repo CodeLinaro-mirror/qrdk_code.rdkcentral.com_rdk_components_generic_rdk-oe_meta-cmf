@@ -1,7 +1,7 @@
 inherit coverity
 
-DEPENDS_remove = "mountutils"
-DEPENDS_remove = "rdkconfig"
+DEPENDS:remove = "mountutils"
+DEPENDS:remove = "rdkconfig"
 
-EXTRA_OECONF_remove = "--enable-mountutils"
-EXTRA_OECONF_remove = "--enable-rdkcertselector"
+EXTRA_OECONF:remove = "--enable-mountutils"
+EXTRA_OECONF:remove = "--enable-rdkcertselector"

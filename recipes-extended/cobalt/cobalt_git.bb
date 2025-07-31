@@ -29,7 +29,7 @@ LIC_FILES_CHKSUM = " \
     file://../wayland/NOTICE;md5=1747492b12a6d7e65a574807f9786501 \
 "
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 DEPENDS = "virtual/libgles2 virtual/egl wayland gstreamer1.0 gstreamer1.0-plugins-base python-native bison-native"
 

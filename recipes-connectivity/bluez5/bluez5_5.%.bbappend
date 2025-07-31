@@ -1,4 +1,4 @@
-SRC_URI_remove_broadband = "file://Bluetooth_service_dependency_broadband.patch"
+SRC_URI:remove_broadband = "file://Bluetooth_service_dependency_broadband.patch"
 
 PACKAGES =+ "${PN}-bluetoothd ${PN}-mpris-proxy"
 

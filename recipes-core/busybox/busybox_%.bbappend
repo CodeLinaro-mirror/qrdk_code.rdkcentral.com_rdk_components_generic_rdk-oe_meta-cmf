@@ -1,10 +1,10 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/busybox:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/busybox:"
 
-SRC_URI_append_client = " \
+SRC_URI:append:client = " \
    file://nc.cfg \
    "
 
-SRC_URI_remove_broadband = "file://nc.cfg"
-SRC_URI_append_broadband = " \
+SRC_URI:remove_broadband = "file://nc.cfg"
+SRC_URI:append:broadband = " \
    file://nc-n.cfg \
    "

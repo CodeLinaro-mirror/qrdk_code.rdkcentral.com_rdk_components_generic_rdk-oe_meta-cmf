@@ -25,7 +25,7 @@ SRC_URI += "file://dropprivileges.h"
 
 S = "${WORKDIR}"
 
-do_install_append() {
+do_install:append() {
     install -p -m 0644 -D ${WORKDIR}/dropprivileges.h  ${D}${includedir}/dropprivileges/dropprivileges.h
     install -p -m 0644 -D ${WORKDIR}/dropprivileges.pc ${D}${libdir}/pkgconfig/dropprivileges.pc
 }

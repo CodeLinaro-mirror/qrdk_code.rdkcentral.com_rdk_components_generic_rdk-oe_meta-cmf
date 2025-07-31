@@ -51,10 +51,10 @@ do_install() {
         install -m 755 ${S}/src/conf/config-lxc-${PREFERRED_VERSION_lxc}/* ${D}${datadir}/${BPN}/src/conf/
 
 	#install_lxc_config non_secure lxc_conf_EXAMPLE.xml
-	#install_lxc_config non_secure lxc_conf_EXAMPLE_appendsample.xml
+	#install_lxc_config non_secure lxc_conf_EXAMPLE:appendsample.xml
 }
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI += "${@bb.utils.contains('DISTRO_FEATURES', 'disable-lxcgen-warnings','file://0001-convert-error-to-warning.patch;apply=no','',d)} \
             ${@bb.utils.contains('DISTRO_FEATURES', 'disable-lxcgen-warnings','file://0001-switch-exceptions-to-warnings.diff;apply=no','',d)} \
             ${@bb.utils.contains('DISTRO_FEATURES', 'disable-lxcgen-warnings','file://0001-capkeep-support.diff;apply=no','',d)} \
