@@ -89,7 +89,6 @@ EXTERNALSRC_pn-mabr-agent = "${@'${RDK_ROOT_PATH}/components/generic/mabr-agent/
 EXTERNALSRC_pn-media-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/media_utils' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/media_utils')) else ''}"
 EXTERNALSRC_pn-mediastreamer = "${@'${RDK_ROOT_PATH}/rdkc/devices/raspberrypi/mediastreamer' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/devices/raspberrypi/mediastreamer')) else ''}"
 EXTERNALSRC_pn-memstress = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mem_analyser_tools/memstress' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mem_analyser_tools/memstress')) else ''}"
-EXTERNALSRC_pn-mesh-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/MeshAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/MeshAgent')) else ''}"
 EXTERNALSRC_pn-mfr-data = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_data' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_data')) else ''}"
 EXTERNALSRC_pn-mfr-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_utils' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_utils')) else ''}"
 EXTERNALSRC_pn-mfrlib-emulator = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/mfrlibs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/mfrlibs')) else ''}"
