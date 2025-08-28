@@ -111,7 +111,6 @@ EXTERNALSRC_pn-rdk-easymesh-controller = "${@'${RDK_ROOT_PATH}/rdkb/components/o
 EXTERNALSRC_pn-rdk-fwupgrade-manager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPlatformManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPlatformManager')) else ''}"
 EXTERNALSRC_pn-rdk-gstreamer-utils = "${@'${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform')) else ''}"
 EXTERNALSRC_pn-rdk-interdevicemanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkInterDeviceManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkInterDeviceManager')) else ''}"
-EXTERNALSRC_pn-rdk-ledmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkLedManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkLedManager')) else ''}"
 EXTERNALSRC_pn-rdk-logger = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger')) else ''}"
 EXTERNALSRC_pn-rdk-oss-ssa = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkssa' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkssa')) else ''}"
 EXTERNALSRC_pn-rdkapps = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkapps' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkapps')) else ''}"
