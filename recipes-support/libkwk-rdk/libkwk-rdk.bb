@@ -29,7 +29,7 @@ PV="1.4.1"
 
 PROVIDES += "virtual/libkwk"
 
-RDEPENDS_${PN}-dev += "libkwk-rdk-header"
+RDEPENDS:${PN}-dev += "libkwk-rdk-header"
 
 # Default package name which provides KWK keys"
 RSUGGESTS_${PN} = "libkwk-rdk-data"

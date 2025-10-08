@@ -10,10 +10,10 @@ PACKAGES = "\
     "
 
 # Opensource components used in RDK
-RDEPENDS_packagegroup-rdk-oss-ipstb = "\
+RDEPENDS:packagegroup-rdk-oss-ipstb = "\
     util-linux-sfdisk \
     "
-RDEPENDS_packagegroup-rdk-oss-ipstb_rpi += "\
+RDEPENDS:packagegroup-rdk-oss-ipstb_rpi += "\
     sysint \
     sysint-conf \
     "

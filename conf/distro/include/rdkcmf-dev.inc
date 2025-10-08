@@ -1,2 +1,2 @@
-SYSTEMD_SERVICE_sysint:remove = "iptables.service"
+SYSTEMD_SERVICE:sysint:remove = "iptables.service"
 

@@ -37,5 +37,5 @@ PACKAGES =+ "${PN}-test"
 PROVIDES += "${PN}-test"
 
 LICENSE_{PN}-test = "RDK and BSD-3"
-FILES_${PN}-test = "${bindir}/dac-jwe-test"
-FILES_${PN}-test += "${bindir}/dac-jws-test"
+FILES:${PN}-test = "${bindir}/dac-jwe-test"
+FILES:${PN}-test += "${bindir}/dac-jws-test"

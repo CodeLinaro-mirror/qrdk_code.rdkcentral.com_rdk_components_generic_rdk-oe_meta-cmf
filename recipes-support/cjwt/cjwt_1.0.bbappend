@@ -1,3 +1,6 @@
 SRC_URI:remove = "git://github.com/xmidt-org/cjwt.git"
 SRC_URI += "git://github.com/xmidt-org/cjwt.git;protocol=https;branch=master"
 
+TARGET_CFLAGS += " \
+    -Wno-error=deprecated-declarations \
+    "

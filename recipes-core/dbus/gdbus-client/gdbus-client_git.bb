@@ -36,5 +36,5 @@ inherit pkgconfig cmake coverity
 # Use RDK logger for logging
 EXTRA_OECMAKE += "-DRDK_LOGGER_ENABLED=ON"
 
-FILES_${PN}     = "${libdir}/*.so.*"
-FILES_${PN}-dev = "${libdir}/*.so ${includedir}/ ${libdir}/pkgconfig/"
+FILES:${PN}     = "${libdir}/*.so.*"
+FILES:${PN}-dev = "${libdir}/*.so ${includedir}/ ${libdir}/pkgconfig/"

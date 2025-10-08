@@ -47,7 +47,7 @@ EXTRA_OECMAKE += "${@oe.utils.conditional('ONEMW_SUPPORT', '1', \
 PACKAGECONFIG ??= "${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'rdklogger', '', d)}"
 PACKAGECONFIG[rdklogger] = "-DRDK_LOGGER_ENABLED=ON,-DRDK_LOGGER_ENABLED=OFF,rdk-logger,,"
 
-SYSTEMD_SERVICE_${PN} = "omi.service"
+SYSTEMD_SERVICE:${PN} = "omi.service"
 
 do_install:append() {
     install -d ${D}${systemd_unitdir}/system
@@ -63,6 +63,6 @@ do_install:append() {
 PACKAGES =+ "${PN}-test"
 PROVIDES += "${PN}-test"
 
-FILES_${PN}-test = "${bindir}/omi-parser-test"
-FILES_${PN} += "${sysconfdir}/tmpfiles.d/omi.conf"
-FILES_${PN}-dev += "${datadir}/dbus-1/interfaces/com.lgi.onemw.omi1.xml"
+FILES:${PN}-test = "${bindir}/omi-parser-test"
+FILES:${PN} += "${sysconfdir}/tmpfiles.d/omi.conf"
+FILES:${PN}-dev += "${datadir}/dbus-1/interfaces/com.lgi.onemw.omi1.xml"

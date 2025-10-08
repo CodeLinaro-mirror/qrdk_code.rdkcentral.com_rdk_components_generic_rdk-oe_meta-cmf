@@ -68,5 +68,5 @@ do_install() {
     cp -prf ${S}/src/out/${PLATFORM}_${BUILD_TYPE}/content ${D}${bindir}
 }
 
-FILES_${PN}  = "${bindir}/cobalt"
-FILES_${PN} += "${bindir}/content/*"
+FILES:${PN}  = "${bindir}/cobalt"
+FILES:${PN} += "${bindir}/content/*"

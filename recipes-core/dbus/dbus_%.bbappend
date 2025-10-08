@@ -1,7 +1,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/dbus:"
 
-RDEPENDS_${PN} += " ${@bb.utils.contains('DISTRO_FEATURES', 'apparmor', 'apparmor', '', d)}"
+RDEPENDS:${PN} += " ${@bb.utils.contains('DISTRO_FEATURES', 'apparmor', 'apparmor', '', d)}"
 
-RDEPENDS_${PN}:remove_camera = "apparmor"
-RDEPENDS_${PN}:remove_broadband = "apparmor"
-RDEPENDS_${PN}:remove_extender = "apparmor"
+RDEPENDS:${PN}:remove_camera = "apparmor"
+RDEPENDS:${PN}:remove_broadband = "apparmor"
+RDEPENDS:${PN}:remove_extender = "apparmor"

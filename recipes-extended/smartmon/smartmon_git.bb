@@ -21,4 +21,4 @@ EXTRA_OECONF += " --enable-breakpad"
 
 BREAKPAD_BIN="smartmon"
 
-SYSTEMD_SERVICE_${PN} = "smartmon.service"
+SYSTEMD_SERVICE:${PN} = "smartmon.service"
