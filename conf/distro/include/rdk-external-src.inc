@@ -105,7 +105,6 @@ EXTERNALSRC_pn-rdkservice-lisa = "${@'${RDK_ROOT_PATH}/components/opensource/LIS
 EXTERNALSRC_pn-rdkshell = "${@'${RDK_ROOT_PATH}/components/opensource/RDKShell' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RDKShell')) else ''}"
 EXTERNALSRC_pn-rdkversion = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkversion' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkversion')) else ''}"
 EXTERNALSRC_pn-residentui = "${@'${RDK_ROOT_PATH}/components/opensource/RDK_apps/accelerator-home-ui/dist' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RDK_apps')) else ''}"
-EXTERNALSRC_pn-rfc = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rfc' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rfc')) else ''}"
 EXTERNALSRC_pn-rialto = "${@'${RDK_ROOT_PATH}/components/opensource/rialto' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rialto')) else ''}"
 EXTERNALSRC_pn-rialto-gstreamer = "${@'${RDK_ROOT_PATH}/components/opensource/rialto-gstreamer' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rialto-gstreamer')) else ''}"
 EXTERNALSRC_pn-rialto-ocdm = "${@'${RDK_ROOT_PATH}/components/opensource/rialto-ocdm' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rialto-ocdm')) else ''}"
