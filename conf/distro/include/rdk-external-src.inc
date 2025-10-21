@@ -24,7 +24,6 @@ EXTERNALSRC_pn-cobalt-launcher = "${@'${RDK_ROOT_PATH}/rdk/components/generic/co
 EXTERNALSRC_pn-configmgr = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/configMgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/configMgr')) else ''}"
 EXTERNALSRC_pn-cpuprocanalyzer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/cpuprocanalyzer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/cpuprocanalyzer')) else ''}"
 EXTERNALSRC_pn-crashlog = "${@'${RDK_ROOT_PATH}/rdk/components/generic/crashlog' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/crashlog')) else ''}"
-EXTERNALSRC_pn-crashupload = "${@'${RDK_ROOT_PATH}/rdk/components/generic/crashupload' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/crashupload')) else ''}"
 EXTERNALSRC_pn-ctrlm-headers = "${@'${RDK_ROOT_PATH}/rdk/components/generic/control' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/control')) else ''}"
 EXTERNALSRC_pn-ctrlm-main = "${@'${RDK_ROOT_PATH}/rdk/components/generic/control' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/control')) else ''}"
 EXTERNALSRC_pn-cvr = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/cvr' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/cvr')) else ''}"
