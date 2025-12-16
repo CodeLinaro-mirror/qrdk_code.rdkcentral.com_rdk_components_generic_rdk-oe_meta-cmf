@@ -66,7 +66,6 @@ EXTERNALSRC_pn-ledmgr-camera = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/
 EXTERNALSRC_pn-ledmgr-headers = "${@'${RDK_ROOT_PATH}/rdk/components/generic/ledmgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/ledmgr')) else ''}"
 EXTERNALSRC_pn-libdacjwt = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libdacjwt' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
 EXTERNALSRC_pn-libmntfsimg = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libmntfsimg' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
-EXTERNALSRC_pn-libunpriv = "${@'${RDK_ROOT_PATH}/rdk/components/generic/libunpriv' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/libunpriv')) else ''}"
 EXTERNALSRC_pn-libkwk-rdk = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libkwk-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
 EXTERNALSRC_pn-libkwk-rdk-header = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libkwk-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
 EXTERNALSRC_pn-libsyswrapper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/libSyscallWrapper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/libSyscallWrapper')) else ''}"
