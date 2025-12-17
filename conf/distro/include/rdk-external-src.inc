@@ -68,7 +68,6 @@ EXTERNALSRC_pn-libdacjwt = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/l
 EXTERNALSRC_pn-libmntfsimg = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libmntfsimg' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
 EXTERNALSRC_pn-libkwk-rdk = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libkwk-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
 EXTERNALSRC_pn-libkwk-rdk-header = "${@'${RDK_ROOT_PATH}/components/opensource/dac-sec/libkwk-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/dac-sec')) else ''}"
-EXTERNALSRC_pn-libsyswrapper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/libSyscallWrapper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/libSyscallWrapper')) else ''}"
 EXTERNALSRC_pn-lxapp-bt-audio = "${@'${RDK_ROOT_PATH}/components/opensource/RDK_apps/BluetoothAudio/dist' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RDK_apps')) else ''}"
 EXTERNALSRC_pn-lxc-container-generator-native = "${@'${RDK_ROOT_PATH}/rdk/components/generic/lxc-container-generator' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/lxc-container-generator')) else ''}"
 EXTERNALSRC_pn-lxccpid = "${@'${RDK_ROOT_PATH}/rdk/components/generic/lxccpid' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/lxccpid')) else ''}"
