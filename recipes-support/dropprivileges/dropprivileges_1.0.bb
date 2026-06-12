@@ -23,9 +23,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7ca
 SRC_URI += "file://dropprivileges.pc"
 SRC_URI += "file://dropprivileges.h"
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
-do_install_append() {
-    install -p -m 0644 -D ${WORKDIR}/dropprivileges.h  ${D}${includedir}/dropprivileges/dropprivileges.h
-    install -p -m 0644 -D ${WORKDIR}/dropprivileges.pc ${D}${libdir}/pkgconfig/dropprivileges.pc
+do_install:append() {
+    install -p -m 0644 -D ${UNPACKDIR}/dropprivileges.h  ${D}${includedir}/dropprivileges/dropprivileges.h
+    install -p -m 0644 -D ${UNPACKDIR}/dropprivileges.pc ${D}${libdir}/pkgconfig/dropprivileges.pc
 }

@@ -7,7 +7,7 @@ python __anonymous() {
             d.setVar('MAKE', '${COVERITY_PATH}/cov-build --config ${COVERITY_CONFIG} --dir ${TOPDIR}/../build-images/${COVERITY_COMPONENT_NAME} make')
 }
 
-do_compile_prepend () {
+do_compile:prepend () {
     COVERITY_REQUIRED="${@d.getVar('COVERITY_REQUIRED', True)}"
     if [ "${COVERITY_REQUIRED}" = "1" ] ;then
         bbnote "Coverity configure start ${COVERITY_COMPONENT_NAME} ${PN}"
@@ -25,7 +25,7 @@ do_compile_prepend () {
     fi
 }
 
-do_compile_append () {
+do_compile:append () {
     COVERITY_REQUIRED="${@d.getVar('COVERITY_REQUIRED', True)}"
     if [ "${COVERITY_REQUIRED}" = "1" ] ;then
         bbnote "Coverity build start ${COVERITY_COMPONENT_NAME} ${PN}"

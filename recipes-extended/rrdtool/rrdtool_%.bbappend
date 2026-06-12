@@ -1,1 +1,1 @@
-PACKAGECONFIG_append = " graph"
+PACKAGECONFIG:append = " graph"

@@ -9,5 +9,5 @@ def get_lxc_classes(d):
 
 inherit ${@get_lxc_classes(d)}
 
-IMAGE_INSTALL_append_lxcsecure = " packagegroup-lxc-secure-containers "
+IMAGE_INSTALL:append_lxcsecure = " packagegroup-lxc-secure-containers "
 

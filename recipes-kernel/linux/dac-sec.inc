@@ -17,7 +17,7 @@
 # please consider adding a new one here to let
 # OMI working on it.
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 # By default OMI functionality (in RDK) is controlled
 # by DAC-sec distro feature see: rdkservices_git.bb

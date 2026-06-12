@@ -22,7 +22,7 @@ DESCRIPTION = "Mounts and un-mounts OCI filesystem images"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'files-onemw:', 'files-rdk:', d)}"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'files-onemw:', 'files-rdk:', d)}"
 
 DEPENDS = "dbus dropprivileges glib-2.0 glib-2.0-native jansson virtual/libkwk libdacjwt libmntfsimg cjose"
 
@@ -47,9 +47,9 @@ EXTRA_OECMAKE += "${@oe.utils.conditional('ONEMW_SUPPORT', '1', \
 PACKAGECONFIG ??= "${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'rdklogger', '', d)}"
 PACKAGECONFIG[rdklogger] = "-DRDK_LOGGER_ENABLED=ON,-DRDK_LOGGER_ENABLED=OFF,rdk-logger,,"
 
-SYSTEMD_SERVICE_${PN} = "omi.service"
+SYSTEMD_SERVICE:${PN} = "omi.service"
 
-do_install_append() {
+do_install:append() {
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/omi.service ${D}${systemd_unitdir}/system/
 
@@ -63,6 +63,6 @@ do_install_append() {
 PACKAGES =+ "${PN}-test"
 PROVIDES += "${PN}-test"
 
-FILES_${PN}-test = "${bindir}/omi-parser-test"
-FILES_${PN} += "${sysconfdir}/tmpfiles.d/omi.conf"
-FILES_${PN}-dev += "${datadir}/dbus-1/interfaces/com.lgi.onemw.omi1.xml"
+FILES:${PN}-test = "${bindir}/omi-parser-test"
+FILES:${PN} += "${sysconfdir}/tmpfiles.d/omi.conf"
+FILES:${PN}-dev += "${datadir}/dbus-1/interfaces/com.lgi.onemw.omi1.xml"

@@ -58,7 +58,7 @@
 ##    ]
 ##}
 
-ROOTFS_POSTPROCESS_COMMAND_append = "generate_libs_json ;"
+ROOTFS_POSTPROCESS_COMMAND:append = "generate_libs_json ;"
 
 def run_process_and_return_output(command):
     import subprocess, shlex

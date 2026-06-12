@@ -43,5 +43,5 @@ python() {
         bb.build.addtask("write_metadata_syslog_ng", "do_package", "do_install", d)
 }
 
-FILES_${PN} += "${@bb.utils.contains('DISTRO_FEATURES','syslog-ng',' ${sysconfdir}/syslog-ng/* ','',d)}" 
+FILES:${PN} += "${@bb.utils.contains('DISTRO_FEATURES','syslog-ng',' ${sysconfdir}/syslog-ng/* ','',d)}" 
 

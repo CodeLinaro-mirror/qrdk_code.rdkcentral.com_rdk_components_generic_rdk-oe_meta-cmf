@@ -36,6 +36,6 @@ PACKAGECONFIG[rdklogger] = "-DRDK_LOGGER_ENABLED=ON,-DRDK_LOGGER_ENABLED=OFF,rdk
 PACKAGES =+ "${PN}-test"
 PROVIDES += "${PN}-test"
 
-LICENSE_{PN}-test = "RDK and BSD-3"
-FILES_${PN}-test = "${bindir}/dac-jwe-test"
-FILES_${PN}-test += "${bindir}/dac-jws-test"
+LICENSE:{PN}-test = "RDK and BSD-3"
+FILES:${PN}-test = "${bindir}/dac-jwe-test"
+FILES:${PN}-test += "${bindir}/dac-jws-test"

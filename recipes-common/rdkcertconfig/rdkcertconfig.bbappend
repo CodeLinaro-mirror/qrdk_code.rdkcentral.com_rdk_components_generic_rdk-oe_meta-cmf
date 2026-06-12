@@ -1,6 +1,6 @@
-DEPENDS_remove = "mountutils"
-DEPENDS_remove = "ssacpc"
+DEPENDS:remove = "mountutils"
+DEPENDS:remove = "ssacpc"
 
-DEPENDS_append = " rdk-logger"
+DEPENDS:append = " rdk-logger"
 
-EXTRA_OECONF_remove = "--enable-cspcrdkconfig"
+EXTRA_OECONF:remove = "--enable-cspcrdkconfig"

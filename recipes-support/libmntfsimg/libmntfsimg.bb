@@ -27,7 +27,7 @@ DEPENDS = "glib-2.0 cryptsetup libgudev lvm2"
 #  - /bin/echo (from busybox)
 #  - /usr/bin/gencert (only when 'ami' is enabled)
 #  - /usr/sbin/{crypt,verity}setup
-RDEPENDS_${PN} += "busybox cryptsetup lvm2-udevrules"
+RDEPENDS:${PN} += "busybox cryptsetup lvm2-udevrules"
 
 SRCREV = "${AUTOREV}"
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/dac-sec;name=${BPN};protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
@@ -44,4 +44,4 @@ PACKAGECONFIG[ami]       = "-DAMI_ENABLED=ON,,,gencert"
 PACKAGES =+ "${PN}-test"
 PROVIDES += "${PN}-test"
 
-FILES_${PN}-test = "${bindir}/mntfsimg_test"
+FILES:${PN}-test = "${bindir}/mntfsimg_test"

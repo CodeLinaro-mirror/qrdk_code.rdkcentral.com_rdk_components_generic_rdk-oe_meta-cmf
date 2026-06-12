@@ -29,21 +29,22 @@ LIC_FILES_CHKSUM = " \
     file://../wayland/NOTICE;md5=1747492b12a6d7e65a574807f9786501 \
 "
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 DEPENDS = "virtual/libgles2 virtual/egl wayland gstreamer1.0 gstreamer1.0-plugins-base python-native bison-native"
 
 inherit python3native
 
 # (dw) We don't know when this will be certified - so we sticked to the master branch
-SRC_URI += "git://cobalt.googlesource.com/depot_tools.git;protocol=https;rev=acbfb02f445b1612e08131e2a4aaca4f1a849050;destsuffix=depot_tools;name=depot_tools"
-SRC_URI += "git://github.com/stagingrdkm/rpi-cobalt-wayland;protocol=https;rev=b12e884ddf6d05cd9d048fba225b84b59c9d958c;name=wayland;destsuffix=wayland"
-SRC_URI += "git://cobalt.googlesource.com/cobalt;protocol=https;rev=3afedffaddc5ae13b4d21dcf2ba98dc14ca58e02;name=cobalt"
+SRC_URI += "git://cobalt.googlesource.com/depot_tools.git;protocol=https;rev=acbfb02f445b1612e08131e2a4aaca4f1a849050;destsuffix=depot_tools;name=depot_tools;nobranch=1"
+SRC_URI += "git://github.com/stagingrdkm/rpi-cobalt-wayland;protocol=https;rev=b12e884ddf6d05cd9d048fba225b84b59c9d958c;name=wayland;destsuffix=wayland;nobranch=1"
+SRC_URI += "git://cobalt.googlesource.com/cobalt;protocol=https;rev=3afedffaddc5ae13b4d21dcf2ba98dc14ca58e02;name=cobalt;nobranch=1"
 SRC_URI += "file://resolution-fix.patch"
 SRC_URI += "file://0001-Do-not-use-clang-compiler.patch"
 SRC_URI += "file://0001-Fix-to-cobalt-compilation-issue.patch"
 SRC_URI += "file://0001-cobalt-fix-errors-due-to-gcc-9-or-higher-version-Wer.patch"
 
+SRCREV_FORMAT = "depot_tools_wayland_cobalt"
 S = "${WORKDIR}/git"
 
 PLATFORM   ?= "raspi-wayland"
@@ -68,5 +69,5 @@ do_install() {
     cp -prf ${S}/src/out/${PLATFORM}_${BUILD_TYPE}/content ${D}${bindir}
 }
 
-FILES_${PN}  = "${bindir}/cobalt"
-FILES_${PN} += "${bindir}/content/*"
+FILES:${PN}  = "${bindir}/cobalt"
+FILES:${PN} += "${bindir}/content/*"

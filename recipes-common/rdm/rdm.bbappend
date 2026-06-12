@@ -11,13 +11,13 @@ DEPENDS += "cjson"
 
 CFLAGS += "-I${PKG_CONFIG_SYSROOT_DIR}/usr/include/cjson -lcjson"
 
-do_compile_append () {
+do_compile:append () {
     ${CC} -Wall -Wextra ${WORKDIR}/jsonquery.c $CFLAGS -o ${WORKDIR}/jsonquery 
 }
 
-do_install_append () {
+do_install:append () {
     install -d ${D}${bindir}
     install -m 0755 ${WORKDIR}/jsonquery ${D}${bindir}/
 }
 
-INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP:${PN} = "ldflags"

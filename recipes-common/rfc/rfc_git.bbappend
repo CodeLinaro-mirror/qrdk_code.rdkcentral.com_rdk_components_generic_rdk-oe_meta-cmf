@@ -1,8 +1,8 @@
-DEPENDS_append = " wdmp-c"
+DEPENDS:append = " wdmp-c"
 
-DEPENDS_remove = "mountutils"
-DEPENDS_remove = "rdkcertconfig"
-EXTRA_OECONF_remove = "--enable-mountutils=yes"
-EXTRA_OECONF_remove = "--enable-rdkcertselector=yes"
+DEPENDS:remove = "mountutils"
+DEPENDS:remove = "rdkcertconfig"
+EXTRA_OECONF:remove = "--enable-mountutils=yes"
+EXTRA_OECONF:remove = "--enable-rdkcertselector=yes"
 
-CFLAGS_append = " -Wno-unused-variable"
+CFLAGS:append = " -Wno-unused-variable"

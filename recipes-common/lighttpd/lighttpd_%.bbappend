@@ -1,2 +1,2 @@
-LICENSE_kirkstone = "BSD-3-Clause"
+LICENSE:kirkstone = "BSD-3-Clause"
 
