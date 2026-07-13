@@ -2,7 +2,7 @@ From f11a55000b8ef8b6033be732d4b63baba5f07a74 Mon Sep 17 00:00:00 2001
 From: Pradeep Sriram <pradeep.sriram@amlogic.com>
 Date: Fri, 14 Oct 2022 01:36:26 +0000
 Subject: [PATCH] 64 bit compile fix
-
+Upstream-Status: Pending
 ---
  src/CMakeLists.txt | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
