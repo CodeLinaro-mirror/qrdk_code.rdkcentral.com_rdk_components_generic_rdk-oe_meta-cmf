@@ -91,7 +91,6 @@ EXTERNALSRC:pn-power-state-monitor = "${@'${RDK_ROOT_PATH}/rdk/components/generi
 EXTERNALSRC:pn-pwstream = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream')) else ''}"
 EXTERNALSRC:pn-qtapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/trm/qtapp/srv' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/trm')) else ''}"
 EXTERNALSRC:pn-rdk-diagnostics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/diagnostics/QAM_device' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/diagnostics')) else ''}"
-EXTERNALSRC:pn-rdk-easymesh-controller = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController')) else ''}"
 EXTERNALSRC:pn-rdk-gstreamer-utils = "${@'${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform')) else ''}"
 EXTERNALSRC:pn-rdk-oss-ssa = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkssa' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkssa')) else ''}"
 EXTERNALSRC:pn-rdkapps = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkapps' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkapps')) else ''}"
