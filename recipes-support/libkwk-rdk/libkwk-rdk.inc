@@ -23,7 +23,7 @@
 
 SRCREV = "${AUTOREV}"
 SRC_URI = "${CMF_GIT_ROOT}/components/opensource/dac-sec;name=${BPN};protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
-S = "${WORKDIR}/git/libkwk-rdk"
+S = "${UNPACKDIR}/git/libkwk-rdk"
 
 inherit ${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'onemwsrc', 'coverity', d)} cmake
 ONEMW_SRC_SUBPATH="rdk/libkwk-rdk"
