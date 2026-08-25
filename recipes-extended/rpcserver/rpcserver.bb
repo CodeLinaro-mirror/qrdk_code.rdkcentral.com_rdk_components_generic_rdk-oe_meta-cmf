@@ -27,6 +27,6 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/rpcserver;name=rpcserver;protocol=${RDK_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
 
-S = "${WORKDIR}/git/"
+S = "${UNPACKDIR}/git/"
 
 inherit pkgconfig cmake coverity

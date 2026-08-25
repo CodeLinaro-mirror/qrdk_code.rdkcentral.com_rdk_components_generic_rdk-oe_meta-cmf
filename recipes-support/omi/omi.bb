@@ -28,7 +28,6 @@ DEPENDS = "dbus dropprivileges glib-2.0 glib-2.0-native jansson virtual/libkwk l
 
 SRCREV = "${AUTOREV}"
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/OMI;name=${BPN};protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
-S = "${WORKDIR}/git"
 PV = "${RDK_RELEASE}+git${SRCPV}"
 
 inherit ${@oe.utils.conditional('ONEMW_SUPPORT', '1', 'onemwsrc', 'coverity', d)} pkgconfig cmake systemd
@@ -51,13 +50,13 @@ SYSTEMD_SERVICE:${PN} = "omi.service"
 
 do_install:append() {
     install -d ${D}${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/omi.service ${D}${systemd_unitdir}/system/
+    install -m 0644 ${UNPACKDIR}/omi.service ${D}${systemd_unitdir}/system/
 
     install -d ${D}${sysconfdir}/tmpfiles.d
-    install -m 0440 ${WORKDIR}/omi.conf ${D}${sysconfdir}/tmpfiles.d/
+    install -m 0440 ${UNPACKDIR}/omi.conf ${D}${sysconfdir}/tmpfiles.d/
 
     install -d ${D}${sysconfdir}/udev/rules.d
-    install -m 0440 ${WORKDIR}/99-omi.rules ${D}${sysconfdir}/udev/rules.d/
+    install -m 0440 ${UNPACKDIR}/99-omi.rules ${D}${sysconfdir}/udev/rules.d/
 }
 
 PACKAGES =+ "${PN}-test"

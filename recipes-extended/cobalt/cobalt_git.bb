@@ -45,7 +45,6 @@ SRC_URI += "file://0001-Fix-to-cobalt-compilation-issue.patch"
 SRC_URI += "file://0001-cobalt-fix-errors-due-to-gcc-9-or-higher-version-Wer.patch"
 
 SRCREV_FORMAT = "depot_tools_wayland_cobalt"
-S = "${WORKDIR}/git"
 
 PLATFORM   ?= "raspi-wayland"
 BUILD_TYPE ?= "gold"
