@@ -29,7 +29,6 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI ="${CMF_GIT_ROOT}/components/opensource/gdbus-client;name=gdbus-client;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH}"
 
-S = "${WORKDIR}/git"
 
 inherit pkgconfig cmake coverity
 

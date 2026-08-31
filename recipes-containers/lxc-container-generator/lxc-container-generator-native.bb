@@ -8,7 +8,6 @@ PR="0"
 
 SRC_URI = "${CMF_GIT_ROOT}/rdk/components/generic/lxc-container-generator;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_MASTER_BRANCH};name=lxc-container-generator"
 SRCREV ?= "${AUTOREV}"
-S = "${WORKDIR}/git"
 
 inherit native
 
@@ -66,9 +65,9 @@ do_apply_patch() {
     cd ${S}
     if [ ! -e patch_applied ]; then
         if [ "${@bb.utils.contains('DISTRO_FEATURES', 'disable-lxcgen-warnings', 'true', 'false', d)}" = "true" ]; then
-                patch -p1 < ${WORKDIR}/0001-convert-error-to-warning.patch
-                patch -p1 < ${WORKDIR}/0001-switch-exceptions-to-warnings.diff
-                patch -p1 < ${WORKDIR}/0001-capkeep-support.diff
+                patch -p1 < ${UNPACKDIR}/0001-convert-error-to-warning.patch
+                patch -p1 < ${UNPACKDIR}/0001-switch-exceptions-to-warnings.diff
+                patch -p1 < ${UNPACKDIR}/0001-capkeep-support.diff
         fi
         touch patch_applied
     fi

@@ -58,7 +58,7 @@ LIC_FILES_CHKSUM:append = ";beginline=512;endline=540;md5=5da5d1decd5e8df09d57c7
 
 MAINTAINER       = "Damian Wrobel <dwrobel@ertelnet.rybnik.pl>"
 
-S                = "${WORKDIR}/${PN}-v${PV}"
+S                = "${UNPACKDIR}/${PN}-v${PV}"
 
 #DEPENDS          = "python-native"
 

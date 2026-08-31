@@ -9,7 +9,6 @@ SRC_URI = "${CMF_GITHUB_ROOT}/smartmon;protocol=${CMF_GIT_PROTOCOL};branch=${CMF
 PV = "1.0+git${SRCPV}"
 SRCREV = "${AUTOREV}"
 
-S = "${WORKDIR}/git"
 
 inherit cmake pkgconfig systemd coverity
 

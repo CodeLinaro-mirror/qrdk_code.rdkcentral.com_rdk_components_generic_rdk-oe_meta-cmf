@@ -12,7 +12,7 @@ DEPENDS += "cjson"
 CFLAGS += "-I${PKG_CONFIG_SYSROOT_DIR}/usr/include/cjson -lcjson"
 
 do_compile:append () {
-    ${CC} -Wall -Wextra ${WORKDIR}/jsonquery.c $CFLAGS -o ${WORKDIR}/jsonquery 
+    ${CC} -Wall -Wextra ${UNPACKDIR}/jsonquery.c $CFLAGS -o ${WORKDIR}/jsonquery 
 }
 
 do_install:append () {
