@@ -23,3 +23,5 @@ do_install:append() {
       ${D}${includedir}/net-snmp/net-snmp-config-64.h
 }
 
+ERROR_QA:remove = "patch-fuzz"
+WARN_QA:append = " patch-fuzz"
