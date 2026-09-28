@@ -1,4 +1,4 @@
-SRC_URI_remove_broadband = "file://Bluetooth_service_dependency_broadband.patch"
+SRC_URI_remove_broadband = "${@bb.utils.contains('DISTRO_FEATURES', 'em_extender', 'file://Bluetooth_service_dependency_broadband.patch', '',d)}"
 
 PACKAGES =+ "${PN}-bluetoothd ${PN}-mpris-proxy"
 
