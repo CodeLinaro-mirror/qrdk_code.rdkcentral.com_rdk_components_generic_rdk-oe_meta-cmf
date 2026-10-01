@@ -2,7 +2,7 @@
 # Adding telemetry to video, broadband, and camera.
 # excluding extender
 DEPENDS += "telemetry"
-DEPENDS:remove_extender = "telemetry"
+DEPENDS:remove:extender = "telemetry"
 
 do_configure:prepend () {
   if ${@bb.utils.contains('DISTRO_FEATURES', 'extender', 'false', 'true', d)}; then
@@ -10,5 +10,5 @@ do_configure:prepend () {
   fi
 }
 
-SRC_URI:remove_extender  = " file://ssh_telemetry_2017_uninit_init_add.patch"
-SRC_URI:remove_extender = " file://ssh_telemetry_2019_uninit_init_add.patch"
+SRC_URI:remove:extender  = " file://ssh_telemetry_2017_uninit_init_add.patch"
+SRC_URI:remove:extender = " file://ssh_telemetry_2019_uninit_init_add.patch"
